@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib';
-import { VpcStack } from '../lib/vpc-stack';
-import { OpenSearchStack } from '../lib/opensearch-stack';
+import { VpcStack } from '../lib/stacks/vpc-stack';
+import { OpenSearchStack } from '../lib/stacks/opensearch-stack';
 
 
 const app = new cdk.App();
@@ -23,7 +23,6 @@ const openSearchStack = new OpenSearchStack(app, 'OpenSearchStack', {
   env: env,
   vpc: vpcStack.vpc,
 });
-
 
 openSearchStack.addDependency(vpcStack);
 
