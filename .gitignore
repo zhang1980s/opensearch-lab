@@ -1,0 +1,31 @@
+# TypeScript compiled output
+*.js
+!jest.config.js
+*.d.ts
+*.js.map
+
+# Node.js
+node_modules/
+
+# CDK
+cdk.out/
+.cdk.staging
+
+# Go binaries
+code/cloudfront-log-generator/cloudfront-log-generator
+
+# Generated log files
+code/cloudfront-log-generator/logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+*.env
+.env.*
